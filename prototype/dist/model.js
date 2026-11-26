@@ -2,56 +2,34 @@
 const Library = (() => {
   const hour = 60 * 60 * 1000;
   const day = 24 * hour;
-  const storageKey = "county-tool-library-v1";
+  const storageKey = "county-tool-library-v2";
   const waiverVersion = "1.0";
   const waiverText = "I agree to use library tools responsibly, follow the manufacturer’s instructions and available safety guidance, and return borrowed tools by their due dates. I understand that the library records borrowing activity and may assess fees for late returns.";
 
   function seed() {
-    const start = Date.now();
-    const central = "Central Tool Library";
-    const north = "North Workshop";
-    const tools = [
-      { barcode: "T-104", name: "Hedge trimmer", category: "Lawn & Garden", branch: central, model: "Cordless · 22 inch", days: 7, value: 90, rank: 24, description: "A cordless trimmer for shaping hedges and maintaining shrubs." },
-      { barcode: "T-205", name: "Tile saw", category: "Home Repair", branch: central, model: "Wet saw · 7 inch", days: 3, value: 160, rate: 3, rank: 3, description: "A wet saw for straight cuts in ceramic and porcelain tile." },
-      { barcode: "T-221", name: "Circular saw", category: "Woodworking", branch: central, model: "Corded · 7¼ inch", days: 7, value: 100, rank: 18, status: "Checked out", description: "A handheld saw for straight cuts in boards and sheet goods." },
-      { barcode: "T-310", name: "Compact router", category: "Woodworking", branch: central, model: "Fixed base · ¼ inch", days: 7, value: 120, rank: 31, description: "A compact router for rounding edges and cutting profiles in wood.", safetyNote: "Read the manufacturer’s manual before use. Wear eye and hearing protection, secure the workpiece, and disconnect power before changing bits." },
-      { barcode: "T-401", name: "Post-hole digger", category: "Lawn & Garden", branch: north, model: "Manual · 48 inch", days: 3, value: 65, rate: 3, rank: 14, description: "A manual clamshell digger for fence and garden posts." },
-      { barcode: "T-415", name: "Pressure washer", category: "Cleaning", branch: north, model: "Electric · 1,800 PSI", days: 3, value: 140, rate: 3, rank: 8, description: "An electric washer for outdoor cleaning projects." },
-      { barcode: "T-501", name: "Hex-key set", category: "Hand Tools", branch: central, model: "Metric · 9 piece", days: 14, value: 5, rank: 40, status: "Checked out", description: "A compact set for common hex fasteners." },
-      { barcode: "T-521", name: "Orbital sander", category: "Woodworking", branch: north, model: "Random orbit · 5 inch", days: 14, value: 55, rank: 26, source: "Donated", audit: true, notes: "Confirm the replacement value and inspect the dust bag.", description: "A handheld sander for smoothing flat wooden surfaces." }
-    ].map(tool => ({
-      rate: 1, source: "Purchased", condition: "Working", status: "Available",
-      safety: "", safetyNote: "", notes: "", audit: false, donationChecked: tool.source === "Donated", ...tool
-    }));
-    const patrons = [
-      ["1001", "Paul Example", 42], ["1002", "Saul Example", 37], ["1003", "Debby Example", 39],
-      ["1004", "Franklin Example", 46], ["1005", "Roy Example", 35], ["1006", "Cathy Example", 33],
-      ["1007", "Billy Example", 17], ["1008", "Rick Example", 30]
-    ].map(([card, name, age]) => ({
-      card, name, age, email: `${name.split(" ")[0].toLowerCase()}@example.test`, valid: true,
-      holdLimit: card === "1008" ? 1 : 5, holdInterval: 0, blocked: false, reason: "",
-      waivers: ["1004", "1005", "1006"].includes(card)
-        ? [{ version: waiverVersion, text: waiverText, signature: name, signedAt: start - 45 * day }]
-        : []
-    }));
-    return {
-      tools, patrons, holds: [], notifications: [], overrides: [], offset: 0, nextBarcode: 600,
-      loans: [
-        { barcode: "T-221", card: "1005", checkedOutAt: start - 4 * day, dueAt: start + 3 * day, rate: 1, value: 100 },
-        { barcode: "T-501", card: "1006", checkedOutAt: start - 28 * day, dueAt: start - 14 * day, rate: 1, value: 5 }
-      ].map(loan => ({ returnedAt: null, lateFee: 0, condition: "", notes: "", lost: false, resolved: false, ...loan }))
-    };
+    return LibrarySeed.create({ waiverVersion, waiverText });
   }
 
-  function read() {
+  function readStored() {
     try {
-      return JSON.parse(localStorage.getItem(storageKey)) ?? seed();
+      return JSON.parse(localStorage.getItem(storageKey));
     } catch {
-      return seed();
+      return null;
     }
   }
 
-  let state = read();
+  let state = readStored();
+
+  async function init() {
+    if (state) {
+      LibrarySeed.load().catch(() => {});
+      return state;
+    }
+    await LibrarySeed.load();
+    state = seed();
+    save();
+    return state;
+  }
 
   function save() {
     try {
@@ -323,18 +301,20 @@ const Library = (() => {
     return expire();
   }
 
-  function reset() {
+  async function reset() {
+    await LibrarySeed.load();
     state = seed();
     save();
   }
 
   function reload() {
-    state = read();
+    const stored = readStored();
+    if (stored) state = stored;
   }
 
   return {
     get state() { return state; },
-    storageKey, waiverVersion, waiverText, tool, patron, hold, activeLoans, activeHolds, expire, now, advanceHours, reset, reload,
+    storageKey, waiverVersion, waiverText, init, tool, patron, hold, activeLoans, activeHolds, expire, now, advanceHours, reset, reload,
     placeHold, extendHold, extensionReason, verify, signWaiver, validateSelection, checkout, dueAt,
     previewReturn, returnTool, markLost, resolveLoss, saveTool, saveRestrictions
   };

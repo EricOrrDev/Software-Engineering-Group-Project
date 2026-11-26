@@ -1,0 +1,750 @@
+{
+  "nextBarcode": 600,
+  "priorWaiver": {
+    "version": "0.9",
+    "text": "I agree to borrow county library tools safely and return them on time."
+  },
+  "tools": [
+    {
+      "barcode": "T-104",
+      "name": "Hedge trimmer",
+      "category": "Lawn & Garden",
+      "branch": "Central Tool Library",
+      "model": "Cordless · 22 inch",
+      "days": 7,
+      "value": 90,
+      "rank": 24,
+      "safety": "https://www.osha.gov/landscape-and-horticultural-services",
+      "description": "A cordless trimmer for shaping hedges and maintaining shrubs."
+    },
+    {
+      "barcode": "T-205",
+      "name": "Tile saw",
+      "category": "Home Repair",
+      "branch": "Central Tool Library",
+      "model": "Wet saw · 7 inch",
+      "days": 3,
+      "value": 160,
+      "rate": 3,
+      "rank": 3,
+      "safety": "https://www.osha.gov/silica-crystalline",
+      "description": "A wet saw for straight cuts in ceramic and porcelain tile."
+    },
+    {
+      "barcode": "T-221",
+      "name": "Circular saw",
+      "category": "Woodworking",
+      "branch": "Central Tool Library",
+      "model": "Corded · 7¼ inch Skilsaw",
+      "days": 7,
+      "value": 100,
+      "rank": 18,
+      "status": "Checked out",
+      "safety": "https://www.osha.gov/woodworking",
+      "description": "A handheld Skilsaw-style circular saw for straight cuts in boards and sheet goods."
+    },
+    {
+      "barcode": "T-310",
+      "name": "Compact router",
+      "category": "Woodworking",
+      "branch": "Central Tool Library",
+      "model": "Fixed base · ¼ inch",
+      "days": 7,
+      "value": 120,
+      "rank": 31,
+      "safety": "https://www.osha.gov/woodworking/routers",
+      "safetyNote": "Read the manufacturer’s manual before use. Wear eye and hearing protection, secure the workpiece, and disconnect power before changing bits.",
+      "description": "A compact router for rounding edges and cutting profiles in wood."
+    },
+    {
+      "barcode": "T-401",
+      "name": "Post-hole digger",
+      "category": "Lawn & Garden",
+      "branch": "North Workshop",
+      "model": "Manual · 48 inch",
+      "days": 3,
+      "value": 65,
+      "rate": 3,
+      "rank": 14,
+      "description": "A manual clamshell digger for fence and garden posts."
+    },
+    {
+      "barcode": "T-415",
+      "name": "Pressure washer",
+      "category": "Cleaning",
+      "branch": "North Workshop",
+      "model": "Electric · 1,800 PSI",
+      "days": 3,
+      "value": 140,
+      "rate": 3,
+      "rank": 8,
+      "safety": "https://www.cdc.gov/natural-disasters/safety/pressure-washer-safety.html",
+      "description": "An electric washer for outdoor cleaning projects."
+    },
+    {
+      "barcode": "T-501",
+      "name": "Hex-key set",
+      "category": "Hand Tools",
+      "branch": "Central Tool Library",
+      "model": "Metric · 9 piece",
+      "days": 14,
+      "value": 5,
+      "rank": 40,
+      "status": "Checked out",
+      "description": "A compact set for common hex fasteners."
+    },
+    {
+      "barcode": "T-521",
+      "name": "Orbital sander",
+      "category": "Woodworking",
+      "branch": "North Workshop",
+      "model": "Random orbit · 5 inch",
+      "days": 14,
+      "value": 55,
+      "rank": 26,
+      "source": "Donated",
+      "audit": true,
+      "notes": "Confirm the replacement value and inspect the dust bag.",
+      "description": "A handheld sander for smoothing flat wooden surfaces."
+    },
+    {
+      "barcode": "T-112",
+      "name": "Electric pole saw",
+      "category": "Lawn & Garden",
+      "branch": "South Community Annex",
+      "model": "Corded · 8 inch telescoping",
+      "days": 3,
+      "value": 115,
+      "rate": 3,
+      "rank": 16,
+      "safety": "https://www.osha.gov/tree-care",
+      "safetyNote": "Keep clear of overhead power lines and wear head, eye, and hearing protection.",
+      "description": "An extendable electric saw for trimming high tree limbs from the ground."
+    },
+    {
+      "barcode": "T-210",
+      "name": "Miter saw",
+      "category": "Woodworking",
+      "branch": "Central Tool Library",
+      "model": "Compound · 10 inch",
+      "days": 3,
+      "value": 180,
+      "rate": 3,
+      "rank": 6,
+      "status": "Checked out",
+      "safety": "https://www.osha.gov/woodworking",
+      "description": "A compound miter saw for accurate crosscuts and bevel cuts in trim and framing."
+    },
+    {
+      "barcode": "T-235",
+      "name": "Demolition hammer",
+      "category": "Home Repair",
+      "branch": "North Workshop",
+      "model": "Electric · SDS-Max",
+      "days": 3,
+      "value": 195,
+      "rate": 3,
+      "rank": 11,
+      "status": "Checked out",
+      "safety": "https://www.osha.gov/hand-power-tools",
+      "description": "A heavy-duty rotary demolition hammer for breaking concrete and tile."
+    },
+    {
+      "barcode": "T-240",
+      "name": "Wet/dry shop vacuum",
+      "category": "Cleaning",
+      "branch": "South Community Annex",
+      "model": "12 gallon · 5 HP",
+      "days": 3,
+      "value": 115,
+      "rate": 3,
+      "rank": 5,
+      "status": "On hold",
+      "description": "A high-capacity workshop vacuum for sawdust, debris, and wet cleanup."
+    },
+    {
+      "barcode": "T-325",
+      "name": "Stud finder & level kit",
+      "category": "Home Repair",
+      "branch": "Central Tool Library",
+      "model": "Digital · 24 inch",
+      "days": 7,
+      "value": 42,
+      "rank": 35,
+      "status": "Checked out",
+      "description": "A digital wall scanner paired with a magnetic box level for hanging cabinets and shelves."
+    },
+    {
+      "barcode": "T-330",
+      "name": "Brad nailer",
+      "category": "Woodworking",
+      "branch": "Central Tool Library",
+      "model": "18-gauge · Pneumatic",
+      "days": 7,
+      "value": 110,
+      "rank": 29,
+      "status": "On hold",
+      "safetyNote": "Use rated eye protection and disconnect air supply before clearing jams.",
+      "description": "An 18-gauge finish nailer for trim, molding, and light cabinetry."
+    },
+    {
+      "barcode": "T-345",
+      "name": "Jigsaw",
+      "category": "Woodworking",
+      "branch": "North Workshop",
+      "model": "Orbital · Variable speed",
+      "days": 7,
+      "value": 75,
+      "rank": 33,
+      "status": "On hold",
+      "description": "A variable-speed jigsaw for curved and plunge cuts in wood and thin metal."
+    },
+    {
+      "barcode": "T-420",
+      "name": "Carpet cleaner",
+      "category": "Cleaning",
+      "branch": "Central Tool Library",
+      "model": "Upright · Deep clean",
+      "days": 3,
+      "value": 150,
+      "rate": 3,
+      "rank": 9,
+      "safety": "https://www.osha.gov/hand-power-tools",
+      "description": "An upright extraction cleaner for carpets and rugs."
+    },
+    {
+      "barcode": "T-430",
+      "name": "Paint sprayer",
+      "category": "Painting & Drywall",
+      "branch": "South Community Annex",
+      "model": "HVLP · 700W",
+      "days": 7,
+      "value": 95,
+      "rank": 21,
+      "safetyNote": "Use in a ventilated area with a respirator and clean nozzle thoroughly before returning.",
+      "description": "An HVLP sprayer for smooth finishes on fences, cabinets, and walls."
+    },
+    {
+      "barcode": "T-440",
+      "name": "Cordless drill driver",
+      "category": "Home Repair",
+      "branch": "South Community Annex",
+      "model": "18V · ½ inch chuck",
+      "days": 14,
+      "value": 85,
+      "rank": 12,
+      "status": "Checked out",
+      "description": "A two-speed cordless drill and driver kit with battery and charger."
+    },
+    {
+      "barcode": "T-450",
+      "name": "Socket & ratchet set",
+      "category": "Automotive",
+      "branch": "Central Tool Library",
+      "model": "SAE & Metric · 64 piece",
+      "days": 14,
+      "value": 60,
+      "rank": 32,
+      "description": "A 64-piece drive socket set for automotive and equipment maintenance."
+    },
+    {
+      "barcode": "T-455",
+      "name": "Drain auger",
+      "category": "Plumbing",
+      "branch": "North Workshop",
+      "model": "25 ft · Hand/drill",
+      "days": 7,
+      "value": 40,
+      "rank": 15,
+      "description": "A 25-foot flexible steel snake for clearing household sink and tub clogs."
+    },
+    {
+      "barcode": "T-460",
+      "name": "Torque wrench",
+      "category": "Automotive",
+      "branch": "South Community Annex",
+      "model": "½ inch drive · Click",
+      "days": 7,
+      "value": 70,
+      "rank": 28,
+      "status": "Checked out",
+      "description": "A calibrated click-type torque wrench for lug nuts and mechanical fasteners."
+    },
+    {
+      "barcode": "T-465",
+      "name": "Fish tape & crimper kit",
+      "category": "Electrical",
+      "branch": "North Workshop",
+      "model": "50 ft · Steel",
+      "days": 14,
+      "value": 35,
+      "rank": 42,
+      "description": "A 50-foot steel fish tape with wire stripper and crimping pliers."
+    },
+    {
+      "barcode": "T-470",
+      "name": "Pipe wrench & cutter set",
+      "category": "Plumbing",
+      "branch": "Central Tool Library",
+      "model": "14 inch · 2 piece",
+      "days": 14,
+      "value": 48,
+      "rank": 38,
+      "status": "Checked out",
+      "description": "A heavy-duty pipe wrench and copper tubing cutter for basic plumbing repairs."
+    },
+    {
+      "barcode": "T-480",
+      "name": "Wallpaper steamer",
+      "category": "Painting & Drywall",
+      "branch": "Central Tool Library",
+      "model": "Electric · 1 gallon",
+      "days": 7,
+      "value": 60,
+      "rank": 34,
+      "condition": "Damaged",
+      "status": "Maintenance",
+      "notes": "Steam hose coupler cracked on return; awaiting replacement gasket.",
+      "description": "A steam plate kit for loosening stubborn wallpaper adhesive."
+    },
+    {
+      "barcode": "T-485",
+      "name": "Drywall sander",
+      "category": "Painting & Drywall",
+      "branch": "North Workshop",
+      "model": "Pole mount · 9 inch",
+      "days": 7,
+      "value": 95,
+      "rank": 25,
+      "condition": "Broken",
+      "status": "Maintenance",
+      "notes": "Trigger switch housing failed during bench test; repair ticket open.",
+      "description": "A long-reach rotary sander for finishing drywall seams."
+    },
+    {
+      "barcode": "T-510",
+      "name": "Belt sander",
+      "category": "Woodworking",
+      "branch": "North Workshop",
+      "model": "3x21 inch · Variable",
+      "days": 7,
+      "value": 80,
+      "rank": 27,
+      "source": "Donated",
+      "condition": "Fair",
+      "notes": "Donated by Roy; inspected and running smoothly with moderate motor brush wear.",
+      "description": "A heavy-stock belt sander for rapid flattening and paint removal."
+    },
+    {
+      "barcode": "T-515",
+      "name": "Wheelbarrow",
+      "category": "Lawn & Garden",
+      "branch": "South Community Annex",
+      "model": "Steel tray · 6 cu ft",
+      "days": 7,
+      "value": 75,
+      "rank": 19,
+      "source": "Donated",
+      "condition": "Working",
+      "notes": "Donated by Roy; tire holds pressure and wooden handles tightened.",
+      "description": "A single-wheel steel wheelbarrow for soil, mulch, and gravel."
+    },
+    {
+      "barcode": "T-530",
+      "name": "Table saw",
+      "category": "Woodworking",
+      "branch": "Central Tool Library",
+      "model": "Portable · 10 inch",
+      "days": 3,
+      "value": 240,
+      "rate": 1,
+      "rank": 4,
+      "audit": true,
+      "notes": "Entered by Daryl: unsure whether portable table saw should be $3/day high-demand and needs a safety guide URL.",
+      "description": "A jobsite table saw with rip fence for straight lumber cuts."
+    },
+    {
+      "barcode": "T-540",
+      "name": "Multimeter & circuit tester",
+      "category": "Electrical",
+      "branch": "South Community Annex",
+      "model": "Digital · True RMS",
+      "days": 14,
+      "value": 45,
+      "rank": 45,
+      "audit": true,
+      "notes": "Entered by Daryl: confirm Electrical vs. Home Repair category and 14-day loan period.",
+      "description": "A handheld digital multimeter and outlet tester for household diagnostics."
+    },
+    {
+      "barcode": "T-550",
+      "name": "Framing nailer",
+      "category": "Home Repair",
+      "branch": "North Workshop",
+      "model": "Pneumatic · 21 degree",
+      "days": 7,
+      "value": 130,
+      "rate": 3,
+      "rank": 22,
+      "source": "Donated",
+      "condition": "Worn",
+      "audit": true,
+      "notes": "Donated by Roy: air fitting leaks slightly; Dorthy should confirm Maintenance vs. Retired.",
+      "description": "A pneumatic framing nailer for structural carpentry."
+    },
+    {
+      "barcode": "T-560",
+      "name": "Reciprocating saw",
+      "category": "Home Repair",
+      "branch": "North Workshop",
+      "model": "Corded · 10 amp",
+      "days": 7,
+      "value": 70,
+      "rank": 36,
+      "source": "Donated",
+      "condition": "Worn",
+      "status": "Retired",
+      "notes": "Retired after four years of donated service; gearbox stripped beyond repair.",
+      "description": "A variable-speed demolition saw for wood and metal rough cuts."
+    },
+    {
+      "barcode": "T-565",
+      "name": "Laser level kit",
+      "category": "Home Repair",
+      "branch": "Central Tool Library",
+      "model": "Self-leveling · Cross line",
+      "days": 7,
+      "value": 110,
+      "rank": 23,
+      "condition": "Lost",
+      "status": "Retired",
+      "notes": "Marked unreturned after 30 days overdue; borrower account awaiting resolution.",
+      "description": "A self-leveling cross-line laser level with tripod mount."
+    }
+  ],
+  "patrons": [
+    { "card": "1001", "name": "Paul Example", "age": 42 },
+    { "card": "1002", "name": "Saul Example", "age": 37 },
+    { "card": "1003", "name": "Debby Example", "age": 39 },
+    {
+      "card": "1004",
+      "name": "Franklin Example",
+      "age": 46,
+      "waivers": [{ "current": true, "signedOffset": { "days": -45 } }]
+    },
+    {
+      "card": "1005",
+      "name": "Roy Example",
+      "age": 35,
+      "waivers": [{ "current": true, "signedOffset": { "days": -45 } }]
+    },
+    {
+      "card": "1006",
+      "name": "Cathy Example",
+      "age": 33,
+      "waivers": [{ "current": true, "signedOffset": { "days": -45 } }]
+    },
+    { "card": "1007", "name": "Billy Example", "age": 17 },
+    {
+      "card": "1008",
+      "name": "Rick Example",
+      "age": 30,
+      "holdLimit": 1,
+      "holdInterval": 7,
+      "reason": "Escalated hold limits after repeated expired reservations.",
+      "waivers": [{ "current": true, "signedOffset": { "days": -60 } }]
+    },
+    {
+      "card": "1009",
+      "name": "Greg Example",
+      "age": 44,
+      "waivers": [{ "version": "0.9", "signedOffset": { "days": -190 } }]
+    },
+    {
+      "card": "1010",
+      "name": "Brenda Example",
+      "age": 29,
+      "holdLimit": 1,
+      "holdInterval": 7,
+      "blocked": true,
+      "reason": "Tool borrowing revoked after repeated uncollected holds and unresolved late returns.",
+      "waivers": [{ "current": true, "signedOffset": { "days": -90 } }]
+    },
+    {
+      "card": "1011",
+      "name": "Marcus Example",
+      "age": 51,
+      "waivers": [{ "current": true, "signedOffset": { "days": -75 } }]
+    },
+    { "card": "1012", "name": "Nora Example", "age": 34, "valid": false }
+  ],
+  "loans": [
+    {
+      "barcode": "T-221",
+      "card": "1005",
+      "checkedOutOffset": { "days": -4 },
+      "dueOffset": { "days": 3 },
+      "rate": 1,
+      "value": 100
+    },
+    {
+      "barcode": "T-501",
+      "card": "1006",
+      "checkedOutOffset": { "days": -28, "hours": -2 },
+      "dueOffset": { "days": -14, "hours": -2 },
+      "rate": 1,
+      "value": 5
+    },
+    {
+      "barcode": "T-210",
+      "card": "1006",
+      "checkedOutOffset": { "days": -17, "hours": -2 },
+      "dueOffset": { "days": -14, "hours": -2 },
+      "rate": 3,
+      "value": 180
+    },
+    {
+      "barcode": "T-235",
+      "card": "1006",
+      "checkedOutOffset": { "days": -17, "hours": -2 },
+      "dueOffset": { "days": -14, "hours": -2 },
+      "rate": 3,
+      "value": 195
+    },
+    {
+      "barcode": "T-325",
+      "card": "1006",
+      "checkedOutOffset": { "days": -21, "hours": -2 },
+      "dueOffset": { "days": -14, "hours": -2 },
+      "rate": 1,
+      "value": 42
+    },
+    {
+      "barcode": "T-440",
+      "card": "1006",
+      "checkedOutOffset": { "days": -28, "hours": -2 },
+      "dueOffset": { "days": -14, "hours": -2 },
+      "rate": 1,
+      "value": 85
+    },
+    {
+      "barcode": "T-460",
+      "card": "1002",
+      "checkedOutOffset": { "days": -7, "hours": -10 },
+      "dueOffset": { "hours": -10 },
+      "rate": 1,
+      "value": 70
+    },
+    {
+      "barcode": "T-470",
+      "card": "1003",
+      "checkedOutOffset": { "days": -9 },
+      "dueOffset": { "days": 5 },
+      "rate": 1,
+      "value": 48
+    },
+    {
+      "barcode": "T-450",
+      "card": "1004",
+      "checkedOutOffset": { "days": -52 },
+      "dueOffset": { "days": -38 },
+      "returnedOffset": { "days": -40 },
+      "rate": 1,
+      "value": 60,
+      "condition": "Working"
+    },
+    {
+      "barcode": "T-465",
+      "card": "1004",
+      "checkedOutOffset": { "days": -33 },
+      "dueOffset": { "days": -19 },
+      "returnedOffset": { "days": -21 },
+      "rate": 1,
+      "value": 35,
+      "condition": "Working"
+    },
+    {
+      "barcode": "T-455",
+      "card": "1004",
+      "checkedOutOffset": { "days": -16 },
+      "dueOffset": { "days": -9 },
+      "returnedOffset": { "days": -11 },
+      "rate": 1,
+      "value": 40,
+      "condition": "Working"
+    },
+    {
+      "barcode": "T-401",
+      "card": "1001",
+      "checkedOutOffset": { "days": -40 },
+      "dueOffset": { "days": -37 },
+      "returnedOffset": { "days": -38 },
+      "rate": 3,
+      "value": 65,
+      "condition": "Working"
+    },
+    {
+      "barcode": "T-515",
+      "card": "1001",
+      "checkedOutOffset": { "days": -25 },
+      "dueOffset": { "days": -18 },
+      "returnedOffset": { "days": -19 },
+      "rate": 1,
+      "value": 75,
+      "condition": "Working"
+    },
+    {
+      "barcode": "T-480",
+      "card": "1009",
+      "checkedOutOffset": { "days": -30 },
+      "dueOffset": { "days": -23 },
+      "returnedOffset": { "days": -24 },
+      "rate": 1,
+      "value": 60,
+      "condition": "Damaged",
+      "notes": "Steam hose coupler cracked during use; moved to maintenance."
+    },
+    {
+      "barcode": "T-565",
+      "card": "1011",
+      "checkedOutOffset": { "days": -42 },
+      "dueOffset": { "days": -35 },
+      "rate": 1,
+      "value": 110,
+      "lateFee": 20,
+      "condition": "Lost",
+      "lost": true,
+      "resolved": false,
+      "notes": "Unreturned after 30 days overdue; patron notified."
+    }
+  ],
+  "holds": [
+    {
+      "id": "H-EXT001",
+      "card": "1009",
+      "barcode": "T-330",
+      "branch": "Central Tool Library",
+      "createdOffset": { "hours": -6 },
+      "expiresOffset": { "hours": 18 },
+      "status": "Active"
+    },
+    {
+      "id": "H-TOP020",
+      "card": "1002",
+      "barcode": "T-240",
+      "branch": "South Community Annex",
+      "createdOffset": { "hours": -9 },
+      "expiresOffset": { "hours": 15 },
+      "status": "Active"
+    },
+    {
+      "id": "H-USED01",
+      "card": "1004",
+      "barcode": "T-345",
+      "branch": "North Workshop",
+      "createdOffset": { "hours": -16 },
+      "expiresOffset": { "hours": 32 },
+      "status": "Active",
+      "extended": true
+    },
+    {
+      "id": "H-EXP001",
+      "card": "1002",
+      "barcode": "T-415",
+      "branch": "North Workshop",
+      "createdOffset": { "days": -12 },
+      "expiresOffset": { "days": -11 },
+      "status": "Expired"
+    },
+    {
+      "id": "H-RCK001",
+      "card": "1008",
+      "barcode": "T-420",
+      "branch": "Central Tool Library",
+      "createdOffset": { "days": -25 },
+      "expiresOffset": { "days": -24 },
+      "status": "Expired"
+    },
+    {
+      "id": "H-RCK002",
+      "card": "1008",
+      "barcode": "T-112",
+      "branch": "South Community Annex",
+      "createdOffset": { "days": -15 },
+      "expiresOffset": { "days": -14 },
+      "status": "Expired"
+    },
+    {
+      "id": "H-RCK003",
+      "card": "1008",
+      "barcode": "T-430",
+      "branch": "South Community Annex",
+      "createdOffset": { "days": -3 },
+      "expiresOffset": { "days": -2 },
+      "status": "Expired"
+    },
+    {
+      "id": "H-BRN001",
+      "card": "1010",
+      "barcode": "T-455",
+      "branch": "North Workshop",
+      "createdOffset": { "days": -20 },
+      "expiresOffset": { "days": -19 },
+      "status": "Expired"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "N-H-EXP001",
+      "holdId": "H-EXP001",
+      "card": "1002",
+      "email": "saul@example.test",
+      "message": "Your hold for Pressure washer has expired.",
+      "createdOffset": { "days": -11 },
+      "status": "Simulated"
+    },
+    {
+      "id": "N-H-RCK001",
+      "holdId": "H-RCK001",
+      "card": "1008",
+      "email": "rick@example.test",
+      "message": "Your hold for Carpet cleaner has expired.",
+      "createdOffset": { "days": -24 },
+      "status": "Simulated"
+    },
+    {
+      "id": "N-H-RCK002",
+      "holdId": "H-RCK002",
+      "card": "1008",
+      "email": "rick@example.test",
+      "message": "Your hold for Electric pole saw has expired.",
+      "createdOffset": { "days": -14 },
+      "status": "Simulated"
+    },
+    {
+      "id": "N-H-RCK003",
+      "holdId": "H-RCK003",
+      "card": "1008",
+      "email": "rick@example.test",
+      "message": "Your hold for Paint sprayer has expired.",
+      "createdOffset": { "days": -2 },
+      "status": "Simulated"
+    },
+    {
+      "id": "N-H-BRN001",
+      "holdId": "H-BRN001",
+      "card": "1010",
+      "email": "brenda@example.test",
+      "message": "Your hold for Drain auger has expired.",
+      "createdOffset": { "days": -19 },
+      "status": "Simulated"
+    }
+  ],
+  "overrides": [
+    {
+      "card": "1004",
+      "reason": "Known regular patron; verified identity at desk after wallet loss.",
+      "createdOffset": { "days": -52 }
+    }
+  ]
+}

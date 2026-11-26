@@ -175,6 +175,7 @@ function renderHold(id, message = '') {
 }
 
 function renderPage(focus = false) {
+  if (!Library.state) return
   Library.expire()
   const [page, reference] = location.hash.slice(1).split('/')
   let id
@@ -202,13 +203,14 @@ document.querySelector('.skip').addEventListener('click', event => {
   app.focus()
 })
 window.addEventListener('storage', event => {
-  if (event.key === Library.storageKey || event.key === null) {
+  if ((event.key === Library.storageKey || event.key === null) && Library.state) {
     Library.reload()
     if (!location.hash.startsWith('#staff')) renderPage()
   }
 })
 let refreshPending = false
 window.setInterval(() => {
+  if (!Library.state) return
   refreshPending = Boolean(Library.expire()) || refreshPending
   const editing = document.activeElement?.matches('input, select, textarea, button')
   if (refreshPending && !location.hash.startsWith('#staff') && !editing) {
@@ -216,4 +218,8 @@ window.setInterval(() => {
     renderPage()
   }
 }, 30_000)
-renderPage()
+Library.init()
+  .then(() => renderPage())
+  .catch(error => {
+    app.innerHTML = `<div class="panel narrow"><h1>Unable to load prototype data</h1><p>${escapeHtml(error.message)}</p><p class="muted">Serve <code>prototype/dist</code> over HTTP (for example, <code>python -m http.server 8000 --directory prototype/dist</code>) rather than opening <code>index.html</code> directly from disk.</p></div>`
+  })

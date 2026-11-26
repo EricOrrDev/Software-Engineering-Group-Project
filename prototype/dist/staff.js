@@ -49,7 +49,7 @@
         ${panel(`<h2>Inventory</h2><p class="muted">${auditCount} flagged for review</p>${button("Manage inventory", "inventory")}`)}
       </div>
       ${panel(`<h2>Demo clock</h2><p>Current library time <strong>${formatDate(Library.now())}</strong></p>
-        <div class="actions">${button("Advance 24 hours", "advance")}${button(`Expiration outbox (${notifications.length})`, "notifications")}</div>`)}`;
+        <div class="actions">${button("Advance 24 hours", "advance")}${button(`Expiration outbox (${notifications.length})`, "notifications")}${button("Reset demo data", "reset")}</div>`)}`;
   }
 
   function notifications() {
@@ -281,6 +281,18 @@
       Library.advanceHours(24);
       show("dashboard", "Advanced the demo clock by 24 hours.");
     },
+    reset: async () => {
+      await Library.reset();
+      patronCard = "";
+      verification = {};
+      selected = [];
+      returnBarcode = "";
+      returnQuery = "";
+      editBarcode = "";
+      inventoryFilters = {};
+      receipt = [];
+      show("dashboard", "Demo data reset to initial state.");
+    },
     notifications: () => show("notifications"),
     "add-copy": addCopy,
     remove: (barcode) => {
@@ -377,13 +389,17 @@
   };
 
   function run(action) {
-    try {
-      action();
-    } catch (error) {
+    const showError = (error) => {
       const alert = app.querySelector("#staff-error");
+      if (!alert) return;
       alert.textContent = error.message;
       alert.hidden = false;
       alert.focus();
+    };
+    try {
+      Promise.resolve(action()).catch(showError);
+    } catch (error) {
+      showError(error);
     }
   }
 

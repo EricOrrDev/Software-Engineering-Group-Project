@@ -15,7 +15,7 @@ The schedule:
 
 ## Interactive prototype
 
-Open [prototype/dist/index.html](prototype/dist/index.html) in a browser. To serve the prototype locally, run this command from the repository root and open [127.0.0.1:8000](http://127.0.0.1:8000/).
+Serve the prototype locally from the repository root and open [127.0.0.1:8000](http://127.0.0.1:8000/) (serving over HTTP is required so the browser can load `prototype/dist/seed_data.json`):
 
 ```powershell
 python -m http.server 8000 --bind 127.0.0.1 --directory prototype/dist
